@@ -4,15 +4,13 @@ using UnityEngine.UI;
 
 public class Move : MonoBehaviour
 {  
-    public float moveSpeed;
-    public float rotSpeed;
-    private int sprintSpeed;
-    private bool isSprinting;
-    public float Stamina = 10;
-    public GameObject groundCheck;
-    private bool isGrounded;
-    // public VirtualJoyStick controls;
-
+    public float moveSpeed; // Decimal number that multiples the Direction to Move Faster
+    public float rotSpeed; // Decimal number that multiples the Rotation to Rotate Faster
+    private int sprintSpeed; // integer to increase moveSpeed exponentially
+    private bool isSprinting; // manage Sprinting
+    public float Stamina = 10; // Finite resource to be able to move faster
+    public GameObject groundCheck; // an Object with GroundCheck script
+    private bool isGrounded; // manage the ability to jump
 
     void Start() {
         sprintSpeed = 3;
