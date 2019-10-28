@@ -18,7 +18,7 @@ public class VirtualJoyStick : MonoBehaviour, IDragHandler, IPointerUpHandler, I
 	public Vector3 InputDirection { set; get; } // Constructor of the Direction from the Joystick
 	private void Start() {
 		bgImg = GetComponent<Image>(); // Initializing bgImg
-		anim = player.GetComponent<Animator>();
+		anim = player.GetComponent<Animator>(); // Initializing anim
 		joystickImg = transform.GetChild(0).GetComponent<Image>(); // Initializing the Joystick from the first child
 		InputDirection = Vector3.zero; // Initializing the Direction to zero
 		movement = player.GetComponent<Move>(); // Initializing Move Script from the player
@@ -68,13 +68,13 @@ public class VirtualJoyStick : MonoBehaviour, IDragHandler, IPointerUpHandler, I
 	public virtual void OnPointerDown(PointerEventData ped) {
 		OnDrag(ped); // Call upon touch
 		isWalking = true; // Start the Walking animation
-		anim.SetBool("isRun", true);
+	//	anim.SetBool("isRun", true);
 	}
 
 	public virtual void OnPointerUp(PointerEventData ped) {
 		InputDirection = Vector3.zero; // Reset the InputDirection
 		joystickImg.rectTransform.anchoredPosition = Vector3.zero; // Reset the position of the Joystick
 		isWalking = false; // Change the state of IsWalkiing to false to stop the Walking animation
-		anim.SetBool("isRun", false);
+	//	anim.SetBool("isRun", false);
 	}
 }
