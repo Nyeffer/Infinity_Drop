@@ -12,23 +12,24 @@ public class PointCounter : MonoBehaviour {
 	// Private Variables
 	private float feetCounted = 0; // access for UI 
 	private Vector3 startPos; // Get the starting position of Player
-	private Text text;
+	private Text text; // Text Component
 
 	// Use this for initialization
 	void Start () {
-		text = GetComponent<Text>();
-		startPos = player.transform.position;
-		feetCounted = (player.transform.position.y - (int)startPos.y) * -1;
+		text = GetComponent<Text>(); // Initialize the Text Component
+		startPos = player.transform.position; // Get the player's Starting position
+		feetCounted = (player.transform.position.y - (int)startPos.y) * -1; // Set the initial amount of points
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		feetCounted = (player.transform.position.y - (int)startPos.y) * -1;
-		text.text = " " + feetCounted.ToString() + " ft"; 
+		feetCounted = (player.transform.position.y - (int)startPos.y) * -1; // Update the points while going down
+		int feet = (int)feetCounted; // Convert to an integer
+		text.text = " " + feet.ToString() + " ft"; // Show the points to the player.
 	}
 
 	// Getter 
-	public float GetFeetCount() {
+	public float GetFeetCount() { // a function to get the current point of the Player
 		return feetCounted;
 	}
 }
