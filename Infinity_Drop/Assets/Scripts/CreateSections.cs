@@ -13,9 +13,9 @@ public class CreateSections : MonoBehaviour {
 		Instantiate(Sections[0], spawnLoc, Quaternion.identity);
 	}
 
-	void OnTriggerEnter(Collider col) {
-		if(col.gameObject.tag == "Player") {
-			SpawnSection((int)col.gameObject.transform.position.y - (60/2));
+	void OnTriggerEnter(Collider col) { // Whenever player Enters, Create a new Section.
+		if(col.gameObject.tag == "Player") { // Check object if it's Player
+			SpawnSection((int)col.gameObject.transform.position.y - 15); // Create the Section
 		}
 	}
 
