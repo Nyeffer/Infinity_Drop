@@ -1176,5 +1176,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Sections:
+  - {fileID: 1858928423088204, guid: c291bc398d350f440a61f7f94fb45c90, type: 2}
+  - {fileID: 1408321853363122}
+  - {fileID: 1354255529134824, guid: 1772756fd40845c44a1edc19c23b3297, type: 2}
+  - {fileID: 1596820240212230, guid: 5ee45812e4e88b7428b1c856dea19315, type: 2}
   - {fileID: 1408321853363122}
   offset: 0

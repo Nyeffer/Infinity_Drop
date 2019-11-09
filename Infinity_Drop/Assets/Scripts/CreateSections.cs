@@ -15,6 +15,7 @@ public class CreateSections : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col) { // Whenever player Enters, Create a new Section.
 		if(col.gameObject.tag == "Player") { // Check object if it's Player
+			int rand = Random.Range(0, Sections.Length);
 			SpawnSection((int)col.gameObject.transform.position.y - 15); // Create the Section
 		}
 	}
