@@ -19,7 +19,6 @@ public class PlatformMove : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		pos = gameObject.transform.position;
-		
 	}
 	
 	// Update is called once per frame
@@ -45,7 +44,7 @@ public class PlatformMove : MonoBehaviour {
 			}
 		} else { // if no, Move in Y or X axis
 			if(VorH) { // Vertical, use  axis
-				if(EorW) { // North
+				if(NorS) { // North
 					npos = new Vector3(pos.x, pos.y + (speed * Time.deltaTime), pos.z);	
 				} else { // South
 					npos = new Vector3(pos.x, pos.y - (speed * Time.deltaTime), pos.z);
