@@ -18,7 +18,7 @@ public class PlatformMove : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		pos = gameObject.transform.position;
+		pos = gameObject.transform.position; // Initializing Vector3 pos
 	}
 	
 	// Update is called once per frame
