@@ -23,7 +23,7 @@ public class PlatformMove : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Vector3 npos = Vector3.zero;
+		Vector3 npos = pos;
 		if(isLinear) { // is Linear?
 			if(NorS) { // if yes, North or South?
 				if(EorW) { // North and East
@@ -58,5 +58,6 @@ public class PlatformMove : MonoBehaviour {
 			}
 		}
 		pos = npos;
+		gameObject.transform.position = pos;
 	}
 }

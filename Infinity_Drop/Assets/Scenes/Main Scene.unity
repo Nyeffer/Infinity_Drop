@@ -728,10 +728,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de145a633a694594d8d052c9727a8567, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NorS: 1
-  EorW: 1
+  NorS: 0
+  EorW: 0
   VorH: 0
-  isLinear: 1
+  isLinear: 0
   speed: 10
 --- !u!65 &1459974812
 BoxCollider:
@@ -741,7 +741,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1459974809}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
