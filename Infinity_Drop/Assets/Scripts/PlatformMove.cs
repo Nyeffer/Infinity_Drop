@@ -27,27 +27,27 @@ public class PlatformMove : MonoBehaviour {
 		if(isLinear) { // is Linear?
 			if(NorS) { // if yes, North or South?
 				if(EorW) { // North and East
-					// positive Y and X
-					npos = new Vector3(pos.x + (speed * Time.deltaTime),pos.y + (speed * Time.deltaTime), pos.z);	
+					// positive Z and X
+					npos = new Vector3(pos.x + (speed * Time.deltaTime), pos.y, pos.z + (speed * Time.deltaTime));	
 				} else { // North and West
-					// positive Y and negative X
-					npos = new Vector3(pos.x - (speed * Time.deltaTime),pos.y + (speed * Time.deltaTime), pos.z);
+					// positive Z and negative X
+					npos = new Vector3(pos.x - (speed * Time.deltaTime), pos.y, pos.z + (speed * Time.deltaTime));
 				}
 			} else {
 				if(EorW) { // South and East
-					// negative Y and positive X
-					npos = new Vector3(pos.x + (speed * Time.deltaTime),pos.y - (speed * Time.deltaTime), pos.z);	
+					// negative Z and positive X
+					npos = new Vector3(pos.x + (speed * Time.deltaTime), pos.y, pos.z - (speed * Time.deltaTime));	
 				} else { // South and West
-					// negative Y and X
-					npos = new Vector3(pos.x - (speed * Time.deltaTime),pos.y - (speed * Time.deltaTime), pos.z);
+					// negative Z and X
+					npos = new Vector3(pos.x - (speed * Time.deltaTime), pos.y, pos.z  - (speed * Time.deltaTime));
 				}
 			}
-		} else { // if no, Move in Y or X axis
-			if(VorH) { // Vertical, use  axis
+		} else { // if no, Move in Z or X axis
+			if(VorH) { // Vertical, use Z axis
 				if(NorS) { // North
-					npos = new Vector3(pos.x, pos.y + (speed * Time.deltaTime), pos.z);	
+					npos = new Vector3(pos.x, pos.y, pos.z + (speed * Time.deltaTime));	
 				} else { // South
-					npos = new Vector3(pos.x, pos.y - (speed * Time.deltaTime), pos.z);
+					npos = new Vector3(pos.x, pos.y, pos.z - (speed * Time.deltaTime));
 				}
 			} else { // Horizontal, use X axis
 				if(EorW) { // East
