@@ -83,12 +83,14 @@ public class Move : MonoBehaviour
 
     void OnTriggerEnter(Collider col) {
         if(col.gameObject.tag == "Floor") {
-            this.gameObject.transform.SetParent(col.gameObject.transform, true);
+            Debug.Log("StepOn");
+            // this.gameObject.transform.SetParent(col.gameObject.transform, true);
         }
     }
 
     void OnTriggerExit(Collider col) {
         if(col.gameObject.tag == "Floor") {
+            Debug.Log("StepOff");
             // this.gameObject.transform.SetParent(null);
         }
     }
