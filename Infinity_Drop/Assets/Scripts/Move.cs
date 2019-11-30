@@ -89,7 +89,7 @@ public class Move : MonoBehaviour
 
     void OnTriggerExit(Collider col) {
         if(col.gameObject.tag == "Floor") {
-            this.gameObject.transform.SetParent(null);
+            // this.gameObject.transform.SetParent(null);
         }
     }
 
