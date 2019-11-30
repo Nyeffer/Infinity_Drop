@@ -67,18 +67,33 @@ public class Move : MonoBehaviour
             SetisSprinting(NowOrNot);
     }
 
-    public bool GetisSprinting() {
-        return isSprinting;
-    }
-
+    // Setter
 
     public void SetisSprinting(bool NowSprint) {
         isSprinting = NowSprint;
     }
 
+    // Getter
+    public bool GetisSprinting() {
+        return isSprinting;
+    }
     public bool GetisGrounded() {
         return isGrounded;
     }
+
+    void OnTriggerEnter(Collider col) {
+        if(col.gameObject.tag == "Floor") {
+            this.gameObject.transform.SetParent(col.gameObject.transform, true);
+        }
+    }
+
+    void OnTriggerExit(Collider col) {
+        if(col.gameObject.tag == "Floor") {
+            this.gameObject.transform.SetParent(null);
+        }
+    }
+
+
 
 
     

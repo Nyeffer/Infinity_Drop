@@ -182,6 +182,25 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 65692544920057132, guid: f975395bd58090442919506acdec030d,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 65692544920057132, guid: f975395bd58090442919506acdec030d,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 1.25494
+      objectReference: {fileID: 0}
+    - target: {fileID: 65692544920057132, guid: f975395bd58090442919506acdec030d,
+        type: 2}
+      propertyPath: m_Center.y
+      value: 0.12747002
+      objectReference: {fileID: 0}
+    - target: {fileID: 1797417836078408, guid: f975395bd58090442919506acdec030d, type: 2}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f975395bd58090442919506acdec030d, type: 2}
   m_IsPrefabAsset: 0
