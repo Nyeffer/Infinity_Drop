@@ -11,6 +11,8 @@ public class PlatformMove : MonoBehaviour {
 	public bool isLinear; // A Bool that dictates whether the Platform goes in a singular direction or not
 	public float speed = 1; // Multiplier for how fast the platform move
 
+	public GameObject Parent; // Object that Player will become a child of
+
 	// Private Variables
 
 	private Vector3 pos; // Vector3 that record the gameObject's position
@@ -60,4 +62,17 @@ public class PlatformMove : MonoBehaviour {
 		pos = npos;
 		gameObject.transform.position = pos;
 	}
+
+	void OnTriggerEnter(Collider col) {
+        if(col.gameObject.tag == "Player") {
+            Debug.Log("StepOn");
+            // col.gameObject.transform.position = this.gameObject.transform.position;
+        }
+    }
+
+    void OnTriggerExit(Collider col) {
+        if(col.gameObject.tag == "Player") {
+            Debug.Log("StepOff");
+        }
+    }
 }
