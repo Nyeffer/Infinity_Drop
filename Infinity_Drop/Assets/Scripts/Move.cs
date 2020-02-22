@@ -3,7 +3,10 @@ using UnityEngine.Networking;
 using UnityEngine.UI;
 
 public class Move : MonoBehaviour
-{  
+{   
+    private static Move _instance;
+
+    public static Move Instance { get { return _instance; }}
     public float moveSpeed; // Decimal number that multiples the Direction to Move Faster
     public float rotSpeed; // Decimal number that multiples the Rotation to Rotate Faster
     private int sprintSpeed; // integer to increase moveSpeed exponentially
@@ -11,7 +14,17 @@ public class Move : MonoBehaviour
     public float Stamina = 10; // Finite resource to be able to move faster
     public GameObject groundCheck; // an Object with GroundCheck script
     private bool isGrounded; // manage the ability to jump
+    private bool isExisting = false;
 
+    
+    
+    void Awake() {
+        if(_instance != null && _instance != this.gameObject) {
+            Destroy(this.gameObject);
+        } else {
+            _instance = this;
+        }
+    }
     void Start() {
         sprintSpeed = 3;
         isSprinting = false;
@@ -19,6 +32,10 @@ public class Move : MonoBehaviour
 
     void Update() {
         isGrounded = groundCheck.GetComponent<GroundCheck>().GetisGround();
+    }
+
+    public void selfDestroy() {
+        Destroy(this.gameObject);
     }
 
 
